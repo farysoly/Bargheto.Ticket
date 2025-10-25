@@ -13,8 +13,6 @@ public class TicketsController(ITicketService ticketService) : ControllerBase
 {
     private Guid CurrentUserId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-    //private string CurrentUserRole => User.FindFirstValue(ClaimTypes.Role);
-
     [Authorize(Roles = "EMPLOYEE")]
     [HttpPost("Create")]
     public async Task<IActionResult> Create([FromBody] CreateTicketCommand command)
