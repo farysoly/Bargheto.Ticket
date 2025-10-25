@@ -5,17 +5,17 @@ namespace Domain.Tickets.Entities;
 
 public class Ticket
 {
-    public Guid Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public StatusType Status { get; set; } = StatusType.OPEN;
-    public PriorityType Priority { get; set; } = PriorityType.LOW;
-    public DateTime CreatedAt { get; set; }
-    public DateTime? UpdatedAt { get; set; }
-    public Guid CreatedByUserId { get; set; }
-    public Guid? AssignedToUserId { get; set; }
-    public User AssignedToUser { get; set; }
-    public User CreatedByUser { get; set; }
+    public Guid Id { get; private set; }
+    public string Title { get; private set; }
+    public string Description { get; private set; }
+    public StatusType Status { get; private set; } = StatusType.OPEN;
+    public PriorityType Priority { get; private set; } = PriorityType.LOW;
+    public DateTime CreatedAt { get; private set; }
+    public DateTime? UpdatedAt { get; private set; }
+    public Guid CreatedByUserId { get; private set; }
+    public Guid? AssignedToUserId { get; private set; }
+    public User AssignedToUser { get; private set; }
+    public User CreatedByUser { get; private set; }
 
     Ticket()
     {
