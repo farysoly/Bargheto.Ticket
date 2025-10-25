@@ -1,0 +1,6 @@
+@Bargheto.Ticket_HostAddress = http://localhost:5209
+
+GET {{Bargheto.Ticket_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
